@@ -1,0 +1,27 @@
+{
+  "name": "acweb",
+  "version": "0.0.0",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "ext-lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "angular": "~1.4.4",
+    "angular-route": "~1.4.4",
+    "requirejs": "~2.1.20",
+    "font-awesome": "~4.4.0",
+    "requirejs-domready": "~2.0.1",
+    "angular-translate": "~2.7.2"
+  },
+  "devDependencies": {
+    "angular-ui-router": "~0.2.15",
+    "angular-strap": "~2.3.1",
+    "angular-motion": "~0.4.2"
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AalsiChef</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+<meta name="description" content="Aalsi Chef">
+<meta name="keywords" content="Aalsi Chef">
+<meta name="author" content="TechFocus">
+  
+<link href="ext-lib/bootstrap/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<link href="ext-lib/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet">
+<link href="ext-lib/angular-motion/dist/angular-motion.min.css"
+	rel="stylesheet">	
+	
+<link href="style/style.css" rel="stylesheet">
+</head>
+<body>
+	<header class="container-fluid navbar-ac">
+		<div class="brand-icon col-xs-10">
+			<span class="brand-title" ui-sref="/">aalsi chef</span>
+			<button class="btn btn-type-1 pull-right"  data-trigger="hover" data-placement="auto" data-type="success" data-title="This is login button" bs-tooltip >I am a Chef</button>
+			
+		</div>
+		<!-- <div class="brand-title col-xs-9">aalsi chef</div> -->
+		<div class="col-xs-2 login-wrapper ">
+			<button class="btn btn-type-2 pull-right" ng-show="true">Login</button>
+			<button class="btn btn-type-2" ng-show="false"><i class="fa fa-bars fa-lg"></i></button>
+		</div>
+
+	</header>
+	<div ui-view></div>
+
+<script type="text/javascript" src="ext-lib/requirejs/require.js" data-main="config.js" ></script>
+</body>
+</html>

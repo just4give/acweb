@@ -1,0 +1,100 @@
+.store{
+	min-height:200px;
+	margin:10px;
+	padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+	border: 0px solid black;
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px #CCC8C8;
+	
+	.footer{
+		font-size: 16px;
+		margin-top:-80px;
+		margin-bottom:10px;
+		.text{
+			font-size:12px;
+		}
+		span{
+			&:hover{
+				cursor:pointer;
+			}
+		}
+	}
+	.name{
+		font-size: 16px;
+		font-weight: bold;
+		&:hover{
+			cursor:pointer;
+			color:black;
+		}
+	}
+	.address{
+		font-size: 12px;
+		padding-left:20px;
+		&:hover{
+			cursor:pointer;
+			color:black;
+		}
+	}
+	.phone{
+		font-size:20px;
+		padding-left: 20px;
+		font-weight: bold;
+	}
+	.hour{
+		font-size:20px;
+		padding-left: 20px;
+		font-weight: bold;
+	}
+	.rating{
+		    color: orange;
+		    list-style: none;
+		    display: inline-flex;
+		    text-align: left;
+		    padding-left: 20px;
+		    font-size: 16px;
+	}
+	.review{
+		color:#F9740F;
+		text-decoration:none;
+		padding-left: 10px;
+		&:hover{
+			cursor: pointer;
+		}
+	}
+
+	.features{
+		    padding-left: 25px;
+		    font-size: 20px;
+		    color: #C3C0C0;
+		    text-align: center;
+		.active{
+			color: white;
+    		background-color: green;
+		}
+		i{
+			    
+		    border-radius: 50%;
+		    background-color: #DDDDDD;
+		    width: 35px;
+		    height: 35px;
+		    line-height: 35px;
+		}
+	}
+	.description{
+		p{
+			    font-size: 14px;
+    			font-weight: 300;
+		}
+	}
+
+}
+.margin-top-20{
+	margin-top:20px;
+}
+
+.padding-left-20{
+	padding-left:20px;
+}

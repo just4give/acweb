@@ -1,0 +1,48 @@
+
+<div class="store" ng-repeat="store in stores">
+	<div class="name">
+		<i class="fa fa-sun-o fa-lg"></i> <a class=""  href="#/restaurant/{{store.name}}">
+			{{store.name}}</a> <i class="fa fa-share-square-o pull-right"></i>
+	</div>
+	<div class="address">
+		<span>{{store.address}}</span>
+	</div>
+	<div>
+		<span class="phone"> <i class="fa fa-phone"></i>
+			{{store.phone}}
+		</span> <span class="hour"> <i class="fa fa-clock-o"></i>
+			{{store.hour}}
+		</span>
+
+	</div>
+	<div class="margin-top-20">
+		<ul class="rating">
+			<li><i class="fa fa-star"></i></li>
+			<li><i class="fa fa-star"></i></li>
+			<li><i class="fa fa-star"></i></li>
+			<li><i class="fa fa-star"></i></li>
+			<li><i class="fa fa-star-half"></i></li>
+		</ul>
+		<span><a class="review">5 reviews</a></span> <span class="features">
+			<i class="fa fa-truck active"></i> <i class="fa fa-credit-card"></i>
+			<i class="fa fa-cutlery"></i>
+		</span>
+	</div>
+
+	<div class="description">
+		<p>{{store.desc}}</p>
+	</div>
+	<filmSlider images="store.photos" />
+
+	<div class="footer">
+		<span><i class="fa fa-heart-o fa-lg"></i><span class="text">
+				Favorite</span></span> <span class="padding-left-20"><i
+			class="fa fa-commenting-o fa-lg"></i><span class="text">
+				Comment</span></span>
+
+
+
+
+	</div>
+
+</div>
