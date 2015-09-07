@@ -28,6 +28,13 @@
 		&:hover{
 			cursor:pointer;
 			color:black;
+			text-decoration:none;
+		}
+		a{
+			color:$dark-brown;
+			&:hover{
+				text-decoration:none;
+			}
 		}
 	}
 	.address{
@@ -49,15 +56,18 @@
 		font-weight: bold;
 	}
 	.rating{
-		    color: orange;
+		    color: $btn-type-2-bg;
 		    list-style: none;
-		    display: inline-flex;
+		    
 		    text-align: left;
 		    padding-left: 20px;
 		    font-size: 16px;
+		    li{
+		    	display:inline;
+		    	}
 	}
 	.review{
-		color:#F9740F;
+		color:$btn-type-2-bg;
 		text-decoration:none;
 		padding-left: 10px;
 		&:hover{
@@ -66,7 +76,7 @@
 	}
 
 	.features{
-		    padding-left: 25px;
+		    
 		    font-size: 20px;
 		    color: #C3C0C0;
 		    text-align: center;

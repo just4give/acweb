@@ -4,7 +4,7 @@
  
 define(dependencies, function(){
    
-   var AppConfig = function($translateProvider, $stateProvider, $urlRouterProvider){
+   var AppConfig = function($translateProvider, $stateProvider, $urlRouterProvider,uiGmapGoogleMapApiProvider){
 	  
 	 
 	   
@@ -23,7 +23,7 @@ define(dependencies, function(){
 	        .state('restaurant', {
 	            url: '/restaurant/:name',
 	            templateUrl: 'modules/restaurant/tmpl/restaurant.html',
-	            controller: 'searchController'
+	            controller: 'restaurantController'
 	        });
 	    
 	    $urlRouterProvider.otherwise('/');
@@ -43,6 +43,8 @@ define(dependencies, function(){
           });
        
        $translateProvider.preferredLanguage('en');
+       
+      
       
 
    };

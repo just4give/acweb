@@ -15,11 +15,13 @@
     			/*background-color: #71716F;*/
     			line-height: 100px;
     			opacity: 0.6;
+    			font-size: 40px;
+			    width: 20px;
+			    text-align: center;
     			transition: opacity 0.3s ease;
     			
 		    	&:hover{
-		    	 /*background-color: black;*/
-		    	 color:$dark-brown;
+		    	 
 		    	 opacity:1;
 		    	 cursor:pointer;
 		    	}
@@ -42,7 +44,7 @@
 			margin: 2px;
 			display:inline;
 			img{
-			
+			border-radius: 5px;
 			width:100px;
 			height:100px;
 			}
