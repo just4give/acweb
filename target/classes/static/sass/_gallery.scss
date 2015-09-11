@@ -40,12 +40,7 @@
 			}
 		
 		}
-		.image-comment{
-			background-color: #DDDDDD;
-			border-radius: 5px;
-			min-height: 300px;
-			padding:5px;
-		}
+		
 	}
 	
 	.modal-header{
@@ -64,4 +59,47 @@
 	.modal-footer{
 	
 	}
+}
+.image-comment{
+			background-color: #DDDDDD;
+			border-radius: 5px;
+			min-height: 300px;
+			padding:10px;
+			padding-left:10px;
+			.user{
+				color: darkgoldenrod;	
+				.name {
+					font-size:18px;
+					line-height: 34px;
+					font-weight: bolder;
+					
+					&:hover{
+						cursor:pointer;
+						text-decoration:underline;
+						
+						color: $dark-brown;
+					}
+				}
+				
+			}
+			.review{
+				font-size: 16px;
+				color: $dark-brown;
+				
+				border-bottom: 1px solid #CCC;
+			}
+			.comment{
+				font-size: 16px;
+				margin-top: 10px;
+				a{
+					text-decoration: none;
+					
+					color: darkgoldenrod;
+					&:hover{
+						cursor:pointer;
+						text-decoration:underline;
+						color: $dark-brown;
+					}
+				}
+			}
 }

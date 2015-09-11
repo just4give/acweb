@@ -66,7 +66,7 @@ define(dependencies, function(){
 		   $log.debug("slide right...");
 	   }
 	   
-	   
+	   $scope.trends = ["abc","adsad","asdasd","ewrrw","asdad"];
    };
     
    return ["$scope","$rootScope","$log", SearchController];

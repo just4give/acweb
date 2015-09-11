@@ -10,6 +10,7 @@
 		    'appModule':'modules/app/AppModule',
 		    'translate':'ext-lib/angular-translate/angular-translate.min',
 		    'filmSlider':'modules/commons/FilmSliderModule',
+		    'photoGallery':'modules/commons/PhotoGalleryModule',
 		    'angularStrap':'ext-lib/angular-strap/dist/angular-strap.min',
 		    'angularStrapTpl':'ext-lib/angular-strap/dist/angular-strap.tpl.min',
 		    'angularAnimate':'ext-lib/angular-animate/angular-animate.min',
@@ -33,6 +34,9 @@
 			'filmSlider':{
 				deps: ['angular']
 			},
+			'photoGallery':{
+				deps: ['angular']
+			},
 			'angularStrap':{
 				deps: ['angular']
 			},
@@ -54,8 +58,8 @@
 	
 	
 		var dependencies = ['domReady!','angular','appModule','jquery','translate','angular-route','filmSlider','angularStrap','angularStrapTpl','angularAnimate',
-		                    'lodash','angularMaps'];
-		var modules =['pascalprecht.translate','ui.router','film-slider','ngAnimate','mgcrea.ngStrap','uiGmapgoogle-maps'];
+		                    'lodash','angularMaps','photoGallery'];
+		var modules =['pascalprecht.translate','ui.router','film-slider','ngAnimate','mgcrea.ngStrap','uiGmapgoogle-maps','photo-gallery'];
 		var appName = 'acweb';
 		
 		require(dependencies, function(document,angular,AppModule){

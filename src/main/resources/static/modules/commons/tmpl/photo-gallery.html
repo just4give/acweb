@@ -1,0 +1,12 @@
+<div class="res-gallery" id="res-gallery"> 
+					
+					<ul>
+						<li ng-repeat="image in images" ng-hide="$index >= maximage"> 
+						<div style="float:left">
+						<img ng-src="images/{{image.url}}" ng-click="openGallery($index)">
+						<div class="overlay" ng-show="$index== maximage-1 " style="opacity:0.5;"></div>
+						<div class="overlay-plus" ng-show="$index == maximage-1  "  ><i class="fa fa-plus"></i></div>
+						</div>
+						</li>
+					</ul>
+</div>

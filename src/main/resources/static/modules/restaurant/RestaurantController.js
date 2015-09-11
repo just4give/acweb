@@ -4,10 +4,25 @@
  
 define(dependencies, function(){
    
-   var RestaurantController = function($scope, $rootScope, $log,$modal){
+   var RestaurantController = function($scope, $rootScope, $log,$modal,$window){
 	   $log.debug('loading restaurant controller');
 	   
-
+	   /* image gallery setup */
+	  
+//	   var maxwidth = $("#res-gallery").width();
+//	   $scope.maximage= Math.floor(maxwidth/110);
+//	   $log.debug("gallery max size "+ $scope.maximage); 
+//	   var w = angular.element($window);
+//	   
+//	   w.bind('resize', function(){
+//		   maxwidth = $("#res-gallery").width();
+//		   $scope.maximage= Math.floor(maxwidth/110);
+//		  $log.debug("gallery max resized..." +$scope.maximage ); 
+//	   });
+	   
+	   
+	   
+	   
 	   $scope.map = { center: { latitude: 42.3583333, longitude: -71.0602778 }, zoom: 16 };
 	   $scope.options = {mapMaker: true, backgroundColor: 'black'};
 	   
@@ -44,10 +59,7 @@ define(dependencies, function(){
 	    	return $scope.gallery[ $scope.imageindex].url;
 	    }
 	    
-	    $scope.openGallery = function(index){
-	    	
-	    	var myModal = $modal({templateUrl: 'modules/commons/tmpl/modal-photo-gallery.html', show: true});
-	    }
+	   
 	    
 	    $scope.scrollLeft = function($event){
 	    	if($scope.imageindex > 0){
@@ -61,9 +73,16 @@ define(dependencies, function(){
 	    		$scope.imageindex += 1;
 	    	}
 	    }
+	    
+	    $scope.reviews = ["abc","adsad","asdasd","ewrrw"];
+	    $scope.similarStores = ["abc","adsad","asdasd","ewrrw","asdad"];
+	    
+	    $scope.writeReview = function(){
+	    	var reviewModal = $modal({templateUrl: 'modules/restaurant/tmpl/modal-res-review.html', show: true});
+	    }
    };
     
-   return ["$scope","$rootScope","$log","$modal", RestaurantController];
+   return ["$scope","$rootScope","$log","$modal","$window", RestaurantController];
 });
 
 }());

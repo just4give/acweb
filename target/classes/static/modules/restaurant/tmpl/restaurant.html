@@ -13,54 +13,152 @@
 					<li class="point">4.5</li>
 				</ul>
 			</div>
+			<div class="col-xs-12">
+				<p class="phone">(860) 456-7890</p>
+			</div>
+			<div class="col-xs-12">
+				<span class="open">OPEN NOW</span>
+				<span class="closed">CLOSED NOW</span>
+			</div>
 			
 	</div>
 	<div class="col-md-6  col-sm-6 col-xs-12 margin-top-20">
 		
-		<div class="col-xs-12">
-				
-		</div>
+	
 		
-		<div class="col-xs-12">
-			<span>
-			<button class="btn btn-inline"><i class="fa fa-pencil"></i> Write Review</button>
-			<button class="btn btn-inline"><i class="fa fa-star"></i> Rate It</button>
-			<button class="btn btn-inline selected"><i class="fa fa-location-arrow "></i> Check-in</button>
+		<div class="">
+			<div class="col-md-6 col-xs-12" style="margin-top:5px">
 			<button class="btn btn-inline"><i class="fa fa-coffee"></i> Menu</button>
+			<button class="btn btn-inline" ng-click="writeReview()"><i class="fa fa-pencil"></i> Write Review</button>
+			<!-- <button class="btn btn-inline"><i class="fa fa-star"></i> Rate It</button> -->
+			</div>
+			
+			<div class="col-md-6 col-xs-12 " style="margin-top:5px">
+			<button class="btn btn-inline selected"><i class="fa fa-location-arrow "></i></button>
+			<button class="btn btn-inline selected"><i class="fa fa-heart-o"></i></button>
 			<button class="btn btn-inline"><i class="fa fa-camera-retro"></i></button>
 			<button class="btn btn-inline selected"><i class="fa fa-bookmark"></i></button>
-			</span>
+			</div>
 		</div>
 		
 	</div>
 
 </div>
 <div class="row res-additional-wrapper">
-	<div class="col-md-3">
+	<div class="col-md-3 col-sm-3 col-xs-12 res-left-pane">
 		<ui-gmap-google-map center='map.center' zoom='map.zoom' options='options'>
 			 <ui-gmap-marker coords="marker.coords" options="marker.options"  idkey="marker.id" 
 			 icon='{url: marker.icon}' >
         	</ui-gmap-marker>
 		</ui-gmap-google-map>
+		
+		<div style="margin-left:10px; ">
+			<h4 class="heading1">LOCATION</h4>
+			<address>
+				Jadavpur, <a>KOL 700075</a>
+			</address>
+			<h4 class="heading1">SPECIALITY</h4>
+			<p>Biriyani, Cutlet, Vegitable Chop </p>
+			<h4 class="heading1">HOURS</h4>
+				<ul class="list-unstyled">
+					<li class="text-bold">Mon 11:30 AM to 10 PM</li>
+					<li>Tue 11:30 AM to 10 PM</li>
+					<li>Wed 11:30 AM to 10 PM</li>
+					<li>Thu 11:30 AM to 10 PM</li>
+					<li>Fri 11:30 AM to 10 PM</li>
+					<li>Sat 11:30 AM to 10 PM</li>
+					<li>Sun 11:30 AM to 10 PM</li>
+				</ul>
+			<h4 class="heading1">FACTS</h4>
+				<ul class="facts list-unstyled">
+					<li class="no"><i class="fa fa-square-o"></i> Accept Cards</li>
+					<li class="yes"><i class="fa fa-check-square-o"></i> Accept Online Order</li>
+					<li class="yes"><i class="fa fa-check-square-o"></i> Home Delivery</li>
+					<li class="no"><i class="fa fa-square-o"></i> Dine-In</li>
+					<li class="yes"><i class="fa fa-check-square-o"></i> Pure Vegiterian</li>
+					<li class="yes"><i class="fa fa-check-square-o"></i> Serve Lunch</li>
+					<li class="yes"><i class="fa fa-check-square-o"></i> Serve Dinner</li>
+				</ul>
+		</div>
+		
 	</div>
 	
-	<div class="col-md-6">
-		<div class="res-gallery">
+	<div class="col-md-6 col-sm-6 col-xs-12">
+	
+		<!-- <div class="res-gallery" id="res-gallery"> 
+					
 					<ul>
-						<li ng-repeat="image in gallery" ng-hide="$index > 2"> 
+						<li ng-repeat="image in gallery" ng-hide="$index >= maximage"> 
 						<div style="float:left">
 						<img ng-src="images/{{image.url}}" ng-click="openGallery($index)">
-						<div class="overlay" ng-show="$index==2 && gallery.length>3" style="opacity:0.5;"></div>
-						<div class="overlay-plus" ng-show="$index==2  && gallery.length>3"  ><i class="fa fa-plus"></i></div>
+						<div class="overlay" ng-show="$index== maximage-1 " style="opacity:0.5;"></div>
+						<div class="overlay-plus" ng-show="$index == maximage-1  "  ><i class="fa fa-plus"></i></div>
 						</div>
-						
-						
 						</li>
 					</ul>
+		</div> -->
+		<!-- end of gallery -->
+		
+		<gallery images="gallery" ></gallery>
+		
+		<div class="col-xs-12">
+			<h4 class="heading1">REVIEWS</h4>
+			<div class="res-comment" ng-repeat="review in reviews">
+						<div >
+						 	<div class="user ">
+						 		<span class="name"><i class="fa fa-user-secret fa-lg"></i> <strong>Mithun Das</strong></span>
+						 		<button class="btn btn-inline gray pull-right"><i class="fa fa-user-plus"></i> Follow</button>
+						 	</div>
+						 	<div class="review">
+						 		<span>0 Reviews</span>
+						 		<span style="margin-left:10px;">0 Followers</span>
+						 		<p class="date">Aug 5, 2015</p>
+						 		<div class="">
+									<ul class="rating">
+										<li><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star-half"></i></li>
+										
+									</ul>
+								</div>
+						 	</div>
+						 	<div class="comment">
+						 		<p>Delicious parsian food $16</p>
+						 		
+						 	</div>
+						 	<div class="like">
+						 		
+						 		<button class="btn btn-inline gray"><i class="fa fa-thumbs-o-up"></i> Like 8</button>
+						 	</div>
+						 	<div class="add-comment ">
+						 		
+						 		<i class="fa fa-user-secret fa-lg" style="width:10%"></i> 
+						 		<input type=" text" class="form-control" placeholder="type your comment"  style="width:70%">
+						 		
+						 		<button class="btn btn-inline gray"  style="width:20%">POST</button>
+						 		
+						 	</div>
+						 	
+						 
+						 </div>
+					</div>
 		</div>
+		
 	</div>
-	<div class="col-md-3">
-	
+	<div class="col-md-3 col-sm-3 col-xs-12">
+		<h4 class="heading1">SIMILAR RESTAURANT</h4>
+		<div class="col-xs-12 short-store" ng-repeat="store in similarStores" ng-hide="$index >2">
+			<div class="col-xs-9">
+				<span class="col-xs-12 name">Biriyani Point asdac adsas adsasd aasdasd</span>
+				<span class="col-xs-12 address">Golpark, KOL 700069</span>
+			</div>
+			<div class="col-xs-3">
+				<span class="point pull-right">3.7</span>
+			</div>
+		</div>
+		
 	</div>
 
 </div>
